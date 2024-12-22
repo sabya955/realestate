@@ -1,0 +1,525 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#logo {
+    display: none;
+}
+#container1{
+    height: 80vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1518733057094-95b53143d2a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGhvdXNlfGVufDB8fDB8fHww");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: gray;
+    background-blend-mode: multiply;
+}
+
+.dropdown {
+    display: none;
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    height: 0; 
+    background-color: rgba(204, 186, 153, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease-in-out;
+}
+.dropdown a:hover{
+    transform: scale(1.1);
+}
+
+.dropdown.open {
+    visibility: visible;
+    opacity: 1;
+    height: 240px; 
+}
+
+#nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+#nav #link {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+#nav #link a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav #link a:hover {
+    color: rgb(185, 180, 120);
+    transform: scale(1.1);
+}
+
+#down{
+    height: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    gap: 10px;
+}
+#down #text{
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 100px 100px 30px;
+    gap: 10px;
+    place-content: center;
+}
+
+#down #text h1{
+    font-size: 70px;
+    color: white;
+}
+#down #text #call{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    width: 300px;
+    background-color: rgb(144, 136, 136);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#down #text #call:hover{
+    background-color: rgb(185, 180, 120);
+    transform: scale(1.1);
+}
+#down #text button{
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 40px;
+    width: 150px;
+}
+
+#down #text button:hover{
+    background-color: rgb(185, 180, 120);
+    transform: scale(1.1);
+}
+#down #message{
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+#message form{
+    height: 60vh;
+    width: 400px;
+    display: grid;
+    grid-template-rows: 50px 50px 40px 40px 40px 60px 50px;
+    grid-template-columns: 300px;
+    gap: 10px;
+    background-color: rgb(147, 144, 144);
+    place-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+#message form input{
+    height: 40px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+#message form #text{
+    height: 60px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+#message form button{
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+}
+#container2{
+    height: 110vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 400px 1fr;
+    grid-template-columns: 1fr;
+    place-content: center;
+}
+#container2 #one{
+    height: 30vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40px 50px;
+    place-content: center;
+    text-align: center;
+    gap: 10px;
+    padding-top: 40px;
+}
+
+#container2 #one h1{
+    font-size: 50px;
+    color: gray;
+}
+
+#container2 #one p{
+    font-size: 25px;
+    color: gray;
+}
+#container2 #property1{
+    height: 60vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    justify-content: center;
+    align-content: center;
+    /* text-align: center; */
+    gap: 15px;
+}
+#container2 #property1> div{
+    box-shadow: 0px 0px 5px black;
+    grid-template-columns: 90%;
+    grid-template-rows: 60% 1fr 1fr 1fr 1fr;
+    display: grid;
+    padding: 2% 0px;
+    justify-content: center;
+    border-radius: 20px;
+  
+}
+#container2 #property1 h2{
+    font-size: 30px;
+    color: gray;
+}
+
+#container2 #property1 p{
+    font-size: 20px;
+    color: gray;
+}
+
+#container2 #property1 img{
+    height:100%;
+    width: 100%;
+    border-radius: 20px;
+}
+#container2 #property1 div :nth-child(2){
+    font-size: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0px 20px;
+    text-align: center;
+    background-color:orangered;
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    animation: effect1 1s ease-in-out infinite;
+    transform: scale(1);
+
+}
+
+#container2 #property1 div :nth-child(2):hover{
+    background-color: rgb(255, 165, 0);
+}
+#container3 {
+    height: 180vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20% 1fr;
+    grid-template-columns: 1fr;
+}
+
+#container3 #first{
+    display: grid;
+    grid-template-rows: 30px 60px;
+    place-content: center;
+    gap: 20px;
+    
+}
+#container3 #property2{
+    display: grid;
+    grid-template-columns: repeat(3, 23%);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+#container3 #property2> div{
+    box-shadow: 0px 0px 5px black;
+    grid-template-columns: 90%;
+    grid-template-rows: 60% 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    padding: 2% 0px;
+    justify-content: center;
+    border-radius: 20px;
+  
+}
+#container3 #property2 img{
+    height:100%;
+    width: 100%;
+    border-radius: 20px;
+}
+#container3 #property2 div :nth-child(2){
+    font-size: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0px 20px;
+    text-align: center;
+    background-color:orangered;
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    animation: effect1 1s ease-in-out infinite;
+    transform: scale(1);
+
+}
+
+@keyframes effect1 {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.02);
+    }
+}
+#about{
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    /* grid-template-rows : 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    gap: 20px;
+}
+#about #one{
+    height: 1fr;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50px 50px 50px 80px 50px;
+    place-content: center;
+    gap: 30px;
+    padding-left: 30px;
+}
+
+#about #one h1{
+    font-size: 50px;
+    color: gray;
+}
+
+#about #one p{
+    font-size: 20px;
+    color: gray;
+}
+
+#about #one h4{
+    font-size: 20px;
+    color: gray;
+}
+
+#about #one h2{
+    font-size: 30px;
+    color: gray;
+
+}
+#about #one button{
+    background-color:  gray ;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 40px;
+    width: 150px;
+}
+
+#about #one button:hover{
+    background-color:  rgb(185, 180, 120);
+    transform: scale(1.1);
+}
+
+#about #two{
+    height: 1fr;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+#about #two img{
+    height: 500px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#container5 {
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    grid-template-rows: 50px 150px 100px 40px; 
+    grid-template-columns: 60%;
+      
+    gap: 10px;
+}
+#container5 #lg{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    margin: auto;
+    
+
+}
+#container5 h1{
+    font-size: 50px;
+    color: gray;
+    font-weight: bold;
+}
+#container5 {
+    font-size: 20px;
+    color: orange;
+}
+#container5 button{
+    background-color:  gray ;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;    
+    height: 40px;
+    width: 150px;
+    margin: auto;
+    font-size: medium;
+}
+
+#container5 button:hover{
+    background-color:  rgb(185, 180, 120);
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    #container1{
+        height: 120vh;
+        width: 100%;
+    }
+    #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        gap: 10px;
+        color: white;
+    }
+
+
+    #nav #link {
+        display: none;
+        color: white;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown.open {
+        height: 240px;
+        flex-direction: column; 
+    }
+    #down{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    #down #text h1{
+        font-size: 30px;
+    }
+    #down #text{
+        height: 40vh;
+        display: grid;
+        grid-template-rows: 60px 50px 50px;
+    }
+    #down #message{
+        height: 65vh;
+        width: 80%;
+        text-align: center;
+    }
+    #message form h1{
+        font-size: 30px;
+    }
+    #message form{
+        width: 100%;
+        display: grid;
+        padding: 20px;
+    }
+    #message form input{
+        height: 30px;
+        width: 100%
+        
+    }
+    #message form #text{
+        height: 60px;
+        width: 100%
+    }
+    
+
+}
+    
